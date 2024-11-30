@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { Suspense } from "react";
-
-async function SlowComponent() {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  return <div>This is a dynamic (and slow) route</div>;
-}
+import { SlowComponent } from "./components/slow-component";
 
 export default function Home() {
   return (
